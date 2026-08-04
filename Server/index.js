@@ -1,36 +1,36 @@
-import express from "express";
-import mongoose from "mongoose";
-// import bodyParser from "body-parser";
-import dotenv from "dotenv";
-import userRoute from "./routes/user.Route.js";
-import dns from "dns";
-import cors from "cors"
+// import express from "express";
+// import mongoose from "mongoose";
+// // import bodyParser from "body-parser";
+// import dotenv from "dotenv";
+// import userRoute from "./routes/user.Route.js";
+// import dns from "dns";
+// import cors from "cors"
 
-dns.setServers(["8.8.8.8", "1.1.1.1"]);
+// dns.setServers(["8.8.8.8", "1.1.1.1"]);
 
-const app = express();
-app.use(express.json());
-dotenv.config()
-app.use(cors())
+// const app = express();
+// app.use(express.json());
+// dotenv.config()
+// app.use(cors())
 
-// routes
-app.use("/api", userRoute)
+// // routes
+// app.use("/api", userRoute)
 
 
-const PORT = process.env.PORT;
-mongoose.connect(process.env.MONGO_URI)
-.then(()=>{
-    console.log("DB CONNECTED!")
+// const PORT = process.env.PORT;
+// mongoose.connect(process.env.MONGO_URI)
+// .then(()=>{
+//     console.log("DB CONNECTED!")
 
-    }).catch ((error) =>{
-        console.log(error.meaage)
-    })
-    app.listen(PORT, ()=>{
-          console.log(`Server is running on port http://localhost:${PORT}`)
-        })
+//     }).catch ((error) =>{
+//         console.log(error.meaage)
+//     })
+//     app.listen(PORT, ()=>{
+//           console.log(`Server is running on port http://localhost:${PORT}`)
+//         })
     
-    app.get("/",(req , res)=>{
-        res.send("App is running")
-    })
+//     app.get("/",(req , res)=>{
+//         res.send("App is running")
+//     })
 
-    export default app;
+  
