@@ -5,10 +5,10 @@
   "license": "ISC",
   "author": "sanaullah",
   "type": "module",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon index.js"
   },
   "dependencies": {
     "body-parser": "^2.3.0",
