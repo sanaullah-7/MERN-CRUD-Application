@@ -1,5 +1,5 @@
 
-import User from "../models/user.model.js";
+import User from "../models/User.js";
 
 // creat new user / or post user data into database
 export const create = async (req , res) =>{
