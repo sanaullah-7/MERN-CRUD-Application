@@ -33,4 +33,4 @@ mongoose.connect(process.env.MONGO_URI)
         res.send("App is running")
     })
 
-  
+    export default app;
