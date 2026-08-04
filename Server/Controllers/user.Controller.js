@@ -1,4 +1,4 @@
-import user from "../../../models/user.js";
+
 import User from "../models/user.model.js";
 
 // creat new user / or post user data into database
