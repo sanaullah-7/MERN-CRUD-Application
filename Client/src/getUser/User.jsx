@@ -11,7 +11,7 @@ export default function User() {
        useEffect(()=>{
         const fetchData = async()=>{
           try {
-       const response = await axios.get("https://mern-crud-application-h3nk.vercel.app");
+       const response = await axios.get("http://localhost:8000/api/users");
            setUsers(response.data.userData); 
           } 
           catch (error)
