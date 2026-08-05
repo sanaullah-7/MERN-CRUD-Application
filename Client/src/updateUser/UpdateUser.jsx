@@ -120,9 +120,9 @@ export default function updateUser() {
           </div>
 
           <button type="sumbit"
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg transition duration-300 cursor-pointer"
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold     py-3 rounded-lg transition duration-300 cursor-pointer"
           >
-            Add User
+            Update User
           </button>
 
         </form>
