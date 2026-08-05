@@ -25,14 +25,14 @@ export default function AddUser() {
 
   const sumbitForm = async(e)=>{
     e.preventDefault();
-    await axios.post("http://localhost:8000/api/user", user)
+    await axios.post("/api/user", user)
     .then((response)=>{
       // console.log("User Created Sucessfully")
       toast.success(response.data.message,{position:"top-left"})
       naviagte("/")
     })
     .catch((error) => {
-  toast.error("User Name Already Exist",{position: "top-left",});
+  toast.error("User Already Exist",{position: "top-left",});
 });}
   return (
     <div className="min-h-screen flex justify-center items-center bg-gray-100">
