@@ -3,6 +3,7 @@ import { StepBack } from 'lucide-react';
 import {Link,useNavigate} from "react-router-dom"
 import axios from "axios";
 import toast from "react-hot-toast";
+import api from "../../api";
 
 
 export default function AddUser() {
@@ -25,7 +26,7 @@ export default function AddUser() {
 
   const sumbitForm = async(e)=>{
     e.preventDefault();
-    await axios.post("/api/user", user)
+    await api.post("/api/user", user)
     .then((response)=>{
       // console.log("User Created Sucessfully")
       toast.success(response.data.message,{position:"top-left"})

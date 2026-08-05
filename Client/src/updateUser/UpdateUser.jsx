@@ -3,6 +3,7 @@ import { StepBack } from 'lucide-react';
 import {Link,useNavigate, useParams} from "react-router-dom"
 import axios from "axios";
 import toast from "react-hot-toast";
+import api from "../../api";
 
 
 
@@ -27,7 +28,7 @@ export default function updateUser() {
   };
 
   useEffect(()=>{
-      axios.get(`http://localhost:8000/api/user/${id}`)
+      api.get(`/api/user/${id}`)
       .then((response)=>{
         setUser(response.data)
       })
@@ -38,7 +39,7 @@ export default function updateUser() {
 
   const sumbitForm = async(e)=>{
     e.preventDefault();
-    await axios.put(`http://localhost:8000/api/update/user/${id}`, user)
+    await api.put(`/api/update/user/${id}`, user)
     .then((response)=>{
       // console.log("User Created Sucessfully")
       toast.success(response.data.message,{position:"top-left"})

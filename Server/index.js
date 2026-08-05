@@ -11,12 +11,13 @@ dns.setServers(["8.8.8.8", "1.1.1.1"]);
 const app = express();
 app.use(express.json());
 dotenv.config()
-app.use(cors(
-    {
-    origin:process.env.CLIENT_URL || "*" ,
+app.use(cors({
+    origin: [
+        "http://localhost:5173",
+        "https://mern-crud-application-h3nk.vercel.app"
+    ],
     credentials: true,
-    }
-))
+}))
 
 // routes
 app.use("/api", userRoute)
